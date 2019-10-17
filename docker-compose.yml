@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+    web:
+        build:
+            context: .
+        container_name: sulu
+        volumes:
+            - .:/var/www
+        ports:
+          - 8090:8000
+        network_mode: bridge
+
